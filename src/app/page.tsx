@@ -1,16 +1,21 @@
 import Link from "next/link";
+import { Container } from "@/components/container";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <Container>
       <h1>Home</h1>
-      <nav>
-        <Link href={'/dashboard'}>Dashboard</Link>
-        <Link href={'/component'}>Dashboard</Link>
-        <Link href="/about">
-          <a>About</a>
+      <nav className="flex gap-2 text-neutral-600">
+        <Link href="/dashboard" className="hover:text-neutral-400 transition">
+          Dashboard
+        </Link>
+        <Link href="/components" className="hover:text-neutral-400 transition">
+          Components
+        </Link>
+        <Link href="/about" className="hover:text-neutral-400 transition">
+          About
         </Link>
       </nav>
-    </main>
-  )
+    </Container>
+  );
 }
